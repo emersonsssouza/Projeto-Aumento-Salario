@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'BounceT1';
+    src: url(Fonts/BounceT1.otf);
+}
+
+@font-face {
+    font-family: 'BounceT2';
+    src: url(Fonts/BounceT2.otf);
+}
+
+@font-face {
+    font-family: 'BounceT3';
+    src: url(Fonts/BounceT3.otf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    overflow-x: hidden;
+    display: flex;
+}
+
+main {
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+}
+
+.main .content_pagination {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #fff;
+}
+
+.main .content_pagination h1 {
+    text-align: center;
+    font-family: 'BounceT2';
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.main .content_pagination .content_image {
+    background-image: url(imagens/bg.png);
+    background-position: bottom;
+    background-size: cover;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.main .content_pagination img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: calc(40px + 20px);
+}
+
+.main .btn button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 180px;
+    height: 30px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .btn #aceitar {
+    background-color: rgb(14, 14, 116);
+}
+
+.main .btn #negar {
+    background-color: rgb(206, 21, 21);
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+    /*Celular menores*/
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .content_pagination {
+        width: 100%;
+        border: none;
+    }
+
+    .main .content_pagination h1 {
+        font-size: 1.3rem;
+        letter-spacing: 5px;
+        line-height: 2rem;
+    }
+
+    .main .content_pagination .content_image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .main .content_pagination img {
+        width: 40%;
+    }
+
+    .main .btn {
+        flex-wrap: nowrap;
+    }
+
+    .main .btn button {
+        width: 160px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 998.98px) {
+
+    /*Tablet*/
+    body {
+        display: grid;
+        place-content: center;
+    }
+
+    /*Celular menores*/
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .content_pagination {
+        width: 95%;
+        border: 1px solid #fff;
+    }
+
+    .main .content_pagination h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        line-height: 2rem;
+    }
+
+    .main .content_pagination .content_image {
+        width: 100%;
+        height: 400px;
+    }
+
+    .main .btn {
+        flex-wrap: nowrap;
+    }
+
+    .main .btn button {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 999px) and (max-width: 1300px) {
+
+    /*Desktop*/
+    .main .content_pagination .content_image {
+        width: 100%;
+        height: 500px;
+    }
+}
