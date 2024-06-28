@@ -6,10 +6,18 @@ function geraPosicao(min, max) {
     return (Math.random() * (max - min) + min) + '%';
 }
 function desvia(valueDesviar) {
+    const screenWidth = window.screen.width;
     let button = valueDesviar;
-    button.style.position = 'absolute';
-    button.style.bottom = geraPosicao(10, 90);
-    button.style.left = geraPosicao(10, 90);
+    if (screenWidth <= 450) {
+        button.style.position = 'absolute';
+        button.style.bottom = geraPosicao(10, 55);
+        button.style.left = geraPosicao(10, 55);
+    } else {
+        button.style.position = 'absolute';
+        button.style.bottom = geraPosicao(10, 90);
+        button.style.left = geraPosicao(10, 90);
+    }
+
 }
 //Contadores;
 const cont1 = document.getElementById("cont1");
